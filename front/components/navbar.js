@@ -1,5 +1,4 @@
-// Simple role-based navbar logic
-// For demo: set role in localStorage ('user' or 'admin') and login state ('isLoggedIn')
+
 
 document.addEventListener('DOMContentLoaded', function() {
   const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
@@ -16,10 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
       ${isLoggedIn ? '<li><a href="logout.html" id="logout-link">Logout</a></li>' : ''}
     </ul>
   `;
-  // Simulate logout
+
   if (isLoggedIn && document.getElementById('logout-link')) {
     document.getElementById('logout-link').onclick = function() {
       localStorage.setItem('isLoggedIn', 'false');
     };
   }
-}); 
+});
