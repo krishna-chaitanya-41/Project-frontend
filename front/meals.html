@@ -3,19 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MoodMeal - Meals</title>
+  <title>MoodMeal - Suggest Meals</title>
+  <!-- Path assumes styles.css is in the 'css' folder, which is a sibling of suggestmealsbymood.html -->
   <link rel="stylesheet" href="css/styles.css">
+
 </head>
-<body style="background-image: url('https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=1500&q=80');">
-  <nav class="navbar" id="navbar"></nav>
-  <main style="max-width:700px;margin:3rem auto;background:rgba(255,255,255,0.85);padding:2rem;border-radius:16px;box-shadow:0 2px 16px rgba(0,0,0,0.1);">
-    <h2 style="color:#222;">Meal Suggestions</h2>
-    <div id="meal-suggestions">
-      <!-- Meal suggestions will go here -->
-      <p style="color:#444;">Get personalized meal suggestions based on your mood!</p>
+<body class="auth-bg">
+<nav class="navbar" id="navbar"></nav>
+<main class="compact-main">
+  <div class="container">
+    <h2>Suggest Meals by Mood</h2>
+
+    <div class="mood-selection">
+      <label for="mood-select">Select Mood:</label>
+      <select id="mood-select">
+        <option value="HAPPY">Happy</option>
+        <option value="SAD" selected>Sad</option> <!-- Set SAD as default -->
+        <option value="STRESSED">Stressed</option>
+        <option value="ANGRY">Angry</option>
+        <option value="EXCITED">Excited</option>
+      </select>
+
+      <button id="get-suggestions-btn">
+        Get Suggestions
+      </button>
     </div>
-  </main>
-  <script src="js/navbar.js"></script>
-  <script src="js/meals.js"></script>
+
+    <p id="error-message" class="error-message"></p>
+
+    <div id="suggested-meals-container" class="suggested-meals-list">
+      <!-- Suggested meals will be rendered here by JavaScript -->
+    </div>
+  </div>
+</main>
+
+<!-- Axios CDN - crucial for making API calls -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<!-- Your plain JS files -->
+<!-- Path assumes navbar.js is in the 'js' folder, which is a sibling of suggestmealsbymood.html -->
+<script src="components/navbar.js"></script>
+<!-- Path assumes suggestmealsbymood.js is in the 'js' folder, which is a sibling of suggestmealsbymood.html -->
+<script src="components/meals.js"></script>
 </body>
-</html> 
+</html>

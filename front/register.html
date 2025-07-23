@@ -7,42 +7,43 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="auth-bg">
-  <nav class="navbar" id="navbar"></nav>
-  <main class="compact-main">
-    <form id="register-form" style="background:rgba(255,255,255,0.9);padding:2rem 2.5rem;border-radius:16px;box-shadow:0 2px 16px rgba(0,0,0,0.1);min-width:300px;">
-      <h2 style="color:#222;">Register</h2>
-      <div style="margin-bottom:1rem;">
-        <label for="register-fullname">Full Name</label><br>
-        <input type="text" id="register-fullname" name="fullname" required style="width:100%;padding:0.5rem;margin-top:0.2rem;">
-      </div>
-      <div style="margin-bottom:1rem;">
-        <label for="register-username">Username</label><br>
-        <input type="text" id="register-username" name="username" required style="width:100%;padding:0.5rem;margin-top:0.2rem;">
-      </div>
-      <div style="margin-bottom:1rem;">
-        <label for="register-email">Email</label><br>
-        <input type="email" id="register-email" name="email" required style="width:100%;padding:0.5rem;margin-top:0.2rem;">
-      </div>
-      <div style="margin-bottom:1rem;">
-        <label for="register-password">Password</label><br>
-        <input type="password" id="register-password" name="password" required style="width:100%;padding:0.5rem;margin-top:0.2rem;">
-      </div>
-      <div style="margin-bottom:1rem;">
-        <label for="register-phone">Phone Number</label><br>
-        <input type="tel" id="register-phone" name="phone" required pattern="[0-9]{10,15}" title="Please enter a valid phone number" style="width:100%;padding:0.5rem;margin-top:0.2rem;">
-      </div>
-      <div style="margin-bottom:1rem;">
-        <label for="register-role">Role</label><br>
-        <select id="register-role" name="role" required style="width:100%;padding:0.5rem;margin-top:0.2rem;">
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
-        </select>
-      </div>
-      <button type="submit" style="width:100%;padding:0.7rem;background:#ffd700;color:#222;border:none;border-radius:8px;font-size:1rem;cursor:pointer;">Register</button>
-      <p style="margin-top:1rem;font-size:0.95rem;">Already have an account? <a href="login.html" style="color:#0077cc;">Login</a></p>
-    </form>
-  </main>
-  <script src="js/navbar.js"></script>
-  <script src="js/register.js"></script>
+<nav class="navbar" id="navbar"></nav>
+<main class="compact-main">
+  <form id="register-form" style="background:rgba(255,255,255,0.9);padding:2rem 2.5rem;border-radius:16px;box-shadow:0 2px 16px rgba(0,0,0,0.1);min-width:300px;">
+    <h2 style="color:#222;">Register</h2>
+    <div style="margin-bottom:1rem;">
+      <label for="register-fullname">Full Name</label><br>
+      <input type="text" id="register-fullname" name="fullname" required style="width:100%;padding:0.5rem;margin-top:0.2rem;">
+    </div>
+    <div style="margin-bottom:1rem;">
+      <label for="register-username">Username</label><br>
+      <input type="text" id="register-username" name="username" required style="width:100%;padding:0.5rem;margin-top:0.2rem;">
+    </div>
+    <div style="margin-bottom:1rem;">
+      <label for="register-email">Email</label><br>
+      <input type="email" id="register-email" name="email" required style="width:100%;padding:0.5rem;margin-top:0.2rem;">
+    </div>
+    <div style="margin-bottom:1rem;">
+      <label for="register-password">Password</label><br>
+      <input type="password" id="register-password" name="password" required style="width:100%;padding:0.5rem;margin-top:0.2rem;">
+    </div>
+    <div style="margin-bottom:1rem;">
+      <label for="register-phone">Phone Number</label><br>
+      <input type="tel" id="register-phone" name="phone" required pattern="[0-9]{10,15}" title="Please enter a valid phone number" style="width:100%;padding:0.5rem;margin-top:0.2rem;">
+    </div>
+    <div style="margin-bottom:1rem;">
+      <label for="register-role">Role</label><br>
+      <select id="register-role" name="role" required style="width:100%;padding:0.5rem;margin-top:0.2rem;">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+    </div>
+    <button type="submit" style="width:100%;padding:0.7rem;background:#ffd700;color:#222;border:none;border-radius:8px;font-size:1rem;cursor:pointer;">Register</button>
+    <p style="margin-top:1rem;font-size:0.95rem;">Already have an account? <a href="login.html" style="color:#0077cc;">Login</a></p>
+  </form>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="components/navbar.js"></script>
+<script src="components/register.js"></script>
 </body>
-</html> 
+</html>
